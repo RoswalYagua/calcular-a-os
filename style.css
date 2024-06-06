@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-light-red: hsl(0, 100%, 67%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--off-white);
+    padding: 0 1rem;
+    display: block;
+    place-content: center;
+}
+
+.App{
+    background-color: var(--white);
+    margin-top: 6rem;
+    padding: 3rem 2rem;
+    border-radius: 20px 20px 100px 20px;
+    .container-formulario{
+        position: relative;
+        .formulario{
+            padding-bottom: 5rem;
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--light-grey);
+            .date{
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-bottom: 2px;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: var(--smokey-grey);
+                }
+                input{
+                    width: 8rem;
+                    height: 3.5rem;
+                    padding: .5rem;
+                    border: 1px solid var(--off-white);
+                    border-radius: 5px;
+                }
+                input:focus{
+                    outline: 1px solid var(--primary-purple);
+                }
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                .error{
+                    color: var(--primary-light-red);
+                    margin-top: 5px;
+                    padding: 0 2px;
+                }
+            }
+        }
+        #btn{
+            width: 4.4rem;
+            height: 4.4rem;
+            background-color: var(--primary-purple);
+            border-radius: 50%;
+            padding: 0 1rem;
+            position: absolute;
+            left: calc(50% - 2.2rem);
+            bottom: -2.8rem;
+            cursor: pointer;
+            transition: background 500ms;
+            svg{
+                width: 100%;
+            }
+        }
+        #btn:hover{
+            background-color: var(--off-black);
+        }
+    }
+
+    #age{
+        margin-top: 3rem;
+        div{
+            font-size: 4rem;
+            font-weight: 800;
+            span{
+                color: var(--primary-purple);
+                margin-right: .5rem;
+            }
+        }
+    }
+}
